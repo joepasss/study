@@ -1,4 +1,6 @@
 references/
+*.swp
 .obsidian
 
 node_modules/
+dist/
