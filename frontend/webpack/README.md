@@ -125,5 +125,27 @@ $ tree . -I "node_modules/"
 </html>
 ```
 
+**webpack.config.js**
+
+``` javascript
+const path = require("path");
+
+const config = {
+  // filename 을 쓰지 않고 폴더 이름만 사용하면 index.js 로 추측함
+  entry: "./src",
+  // dist directory가 없을경우 자동으로 생성함
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js",
+  },
+  mode: "production",
+};
+
+module.exports = config;
+```
+
+[entry](https://webpack.kr/configuration/entry-context/)
+[output](https://webpack.kr/configuration/output/)
+
 ---
 
